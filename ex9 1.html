@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+</head>
+
+<body>
+
+    <h1>Welcome to our home page</h1>
+
+    <p>Glad to meet you. This is a paragraph.</p>
+
+    <button onclick="changeText()">Click Me</button>
+
+    <script>
+        function changeText() {
+            document.getElementsByTagName("h1")[0].innerHTML = "You have clicked the button.";
+            document.getElementsByTagName("p")[0].innerHTML = "Good you have made it.";
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- User Input Box -->
+<label for="userType">Please select your user type:</label>
+<select id="userType" onchange="redirectToPage()">
+	<option value="">--Select--</option>
+	<option value="student">Student</option>
+	<option value="parent">Parent</option>
+</select>
+
+<script>
+    function redirectToPage() {
+        var userType = document.getElementById("userType").value;
+    }
