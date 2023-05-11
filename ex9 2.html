@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Type Redirect</title>
+</head>
+
+<body>
+
+    <label for="userType">Please select your user type:</label>
+    <input type="text" id="userType">
+    <button onclick="redirectToPage()">Submit</button>
+
+    <script>
+        function redirectToPage() {
+            var userType = document.getElementById("userType").value;
+            if (userType == "student") {
+                window.location.href = "https://sunnyjys.github.io/ICT441-1-/courses.html";
+            } else if (userType == "parent") {
+                window.location.href = "https://sunnyjys.github.io/ICT441-1-/contact.html";
+            } else {
+                alert("Input not contested, please re-enter")
+            }
+        }
+    </script>
+
+</body>
+
+</html>
